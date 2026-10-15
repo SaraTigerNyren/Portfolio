@@ -9,15 +9,13 @@ window.PROJEKT = [
     kortnamn: "Mobilhållare",
     titel: "Justerbar mobil- och surfplattehållare",
     kategori: "Produktutveckling · CAD",
-    kortBeskrivning: "Konceptutveckling med fokus på stabilitet, användarvänlighet och tillverkningsanpassning.",
+    kortBeskrivning: "Konceptutveckling med fokus på konstruktion, användarvänlighet och tillverkningsanpassning.",
     taggar: ["CAD", "Produktutveckling", "Konceptdesign"],
     omslagsbild: "", // t.ex. "bilder/mobilhallare-omslag.jpg"
-    introduktion: "Ett produktutvecklingsprojekt där jag arbetat med att ta fram en justerbar hållare för mobiltelefoner och surfplattor.",
+    introduktion: "Ett produktutvecklingsprojekt där jag i grupp med andra, arbetat med att ta fram en justerbar hållare för mobiltelefoner.",
     avsnitt: [
-      { rubrik: "Bakgrund och mål", text: "Beskriv problemet som produkten ska lösa och vilka användare du riktar dig till.", bilder: [] },
-      { rubrik: "Kundbehov och idéarbete", text: "Berätta om dina kundbehov, skisser och koncept. Hur jämförde du alternativen?", bilder: [] },
-      { rubrik: "CAD och konstruktion", text: "Beskriv hur du utvecklade konstruktionen och vilka material eller tillverkningsmetoder du övervägde.", bilder: [] },
-      { rubrik: "Resultat och lärdomar", text: "Visa slutkonceptet och sammanfatta vad du lärde dig.", bilder: [] }
+      { rubrik: "Bakgrund och mål", text: "Syftet var att axla yrkesrollen som CAD-konstruktör i ett modernt industriellt produktutvecklingsprojekt och att konstruera ett modulärt och justerbart ställ/hållare för en smartphone, avsett att tillverkas i formsprutad plast och bockad plåt. Gruppen skulle genomföra detta genom att ta en produktidé genom de tidiga faserna av konstruktionsprocessen – från kundbehov och kravspecifikation till en färdig digital prototyp (CAD-modell). ", bilder: [] }
+      { rubrik: "CAD och konstruktion", text: "Här presnteras bilder på Cad konstruktionen, konstruktionen 3D printades också och det visas också här i bilderna nedan", bilder: [] },
     ]
   },
   {
