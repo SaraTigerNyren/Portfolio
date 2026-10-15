@@ -1,18 +1,11 @@
-SARA TIGER NYRÉN – ENKEL PORTFOLIOMALL
+SARA TIGER NYRÉN – PORTFOLIO
 
-1. Ladda upp index.html, projekt.html, projektdata.js och sara.jpg i huvudmappen i GitHub-repot Portfolio.
-   Ladda upp projektbilder i mappen bilder (skapa den vid behov).
-2. Öppna projektdata.js på GitHub och klicka på pennan för att redigera.
-3. Varje block som börjar med { id: ... } är ett projekt.
-   Ändra titel, kategori, kortBeskrivning, introduktion och avsnitt.
-4. LÄGGA TILL BILD: ladda först upp t.ex. bilder/koncept1.jpg.
-   Ändra sedan: bilder: []
-   till: bilder: [{ fil: "bilder/koncept1.jpg", bildtext: "Mitt första koncept" }]
-   Flera bilder: bilder: [{ fil: "bilder/bild1.jpg", bildtext: "Skiss" }, { fil: "bilder/bild2.jpg", bildtext: "CAD-modell" }]
-5. NYTT PROJEKT: kopiera ett helt projektblock i projektdata.js och klistra in före sista ];
-   Sätt ett nytt unikt id och skriv en KOMMA mellan projektblocken.
-6. Klicka på Commit changes. Vänta 1–2 minuter och ladda om din GitHub Pages-sida.
+1. Öppna ditt GitHub-repository Portfolio.
+2. Välj Add file → Upload files.
+3. Ladda upp index.html, projekt.html, projektdata.js och mappen bilder med alla bildfiler. Behåll sara.jpg som du redan har (eller ladda upp den från paketet).
+4. Commit changes och vänta en kort stund på GitHub Pages.
+5. Öppna https://saratigernyren.github.io/ och klicka på projekten.
 
-VIKTIGT: index.html och projekt.html ska normalt inte ändras. Allt projektinnehåll ändras i projektdata.js.
-Din tidigare mobilhallare.html kan ligga kvar, men startsidan använder nu projekt.html?id=mobilhallare.
-Undvik att ladda upp privata uppgifter och upphovsrättsskyddade bilder som du saknar rätt att publicera.
+VIKTIGT: Ladda upp bildfilerna i en mapp som heter exakt bilder, annars syns de inte. GitHub-webbgränssnittet kan hantera mappstruktur genom att du drar in mappen eller lägger till filer med sökväg.
+
+Du ändrar innehåll i projektdata.js. För varje projekt: titel, introduktion, avsnitt, bilder. Alla bilder i detta paket kommer från dina uppladdade presentationer. Vissa är översiktsbilder och kan senare bytas mot separata högupplösta original.
