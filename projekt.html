@@ -464,7 +464,7 @@
       }).join('');
 
       main.innerHTML = `
-        <div class="${isSimple ? 'simple-project' : 'detailed-project'}">
+       <div class="${isSimple ? 'simple-project' : 'detailed-project'} project-${esc(project.id)}">
 
           <div class="hero">
             <div class="wrap">
@@ -492,6 +492,103 @@
 
           <div class="wrap content">
             ${sections}
+
+/* 02 – Profixio: mindre bilder */
+.project-profixio .cover {
+  max-width: 380px;
+  max-height: 460px;
+  object-fit: contain;
+}
+
+.project-profixio .gallery {
+  max-width: 600px;
+}
+
+.project-profixio .gallery img {
+  max-height: 460px;
+  object-fit: contain;
+}
+
+/* 04 – TrädgårdsMarie: mindre logotyp */
+.project-grafisk-formgivning
+.section:nth-child(4) .gallery {
+  max-width: 230px;
+  justify-self: center;
+}
+
+/* 04 – Rädda julen: bilder under texten */
+.project-grafisk-formgivning
+.section:nth-child(6) {
+  display: block;
+}
+
+.project-grafisk-formgivning
+.section:nth-child(6) .gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 720px;
+  gap: 24px;
+  margin: 28px auto 0;
+}
+
+.project-grafisk-formgivning
+.section:nth-child(6) .gallery img {
+  max-height: 440px;
+}
+
+/* 06 – Motion: kompaktare bilder */
+.project-ovriga-ux
+.section:nth-child(1) .gallery {
+  max-width: 300px;
+  justify-self: center;
+  gap: 16px;
+}
+
+.project-ovriga-ux
+.section:nth-child(1) .gallery img {
+  max-height: 220px;
+}
+
+/* 06 – Interaktiv bokprototyp:
+   text ovanför, bilder i ett eget galleri */
+.project-ovriga-ux
+.section:nth-child(2) {
+  display: block;
+}
+
+.project-ovriga-ux
+.section:nth-child(2) .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: 18px;
+  max-width: 850px;
+  margin: 28px auto 0;
+}
+
+.project-ovriga-ux
+.section:nth-child(2) .gallery img {
+  max-height: 270px;
+}
+
+/* Anpassning för mobil */
+@media (max-width: 650px) {
+  .project-grafisk-formgivning
+  .section:nth-child(6) .gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .project-ovriga-ux
+  .section:nth-child(2) .gallery {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+
+  .project-profixio .gallery {
+    max-width: 100%;
+  }
+}
 
             <p style="margin-top:40px">
               <a href="index.html#projekt">
