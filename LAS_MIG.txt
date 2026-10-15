@@ -1,0 +1,18 @@
+SARA TIGER NYRÉN – ENKEL PORTFOLIOMALL
+
+1. Ladda upp index.html, projekt.html, projektdata.js och sara.jpg i huvudmappen i GitHub-repot Portfolio.
+   Ladda upp projektbilder i mappen bilder (skapa den vid behov).
+2. Öppna projektdata.js på GitHub och klicka på pennan för att redigera.
+3. Varje block som börjar med { id: ... } är ett projekt.
+   Ändra titel, kategori, kortBeskrivning, introduktion och avsnitt.
+4. LÄGGA TILL BILD: ladda först upp t.ex. bilder/koncept1.jpg.
+   Ändra sedan: bilder: []
+   till: bilder: [{ fil: "bilder/koncept1.jpg", bildtext: "Mitt första koncept" }]
+   Flera bilder: bilder: [{ fil: "bilder/bild1.jpg", bildtext: "Skiss" }, { fil: "bilder/bild2.jpg", bildtext: "CAD-modell" }]
+5. NYTT PROJEKT: kopiera ett helt projektblock i projektdata.js och klistra in före sista ];
+   Sätt ett nytt unikt id och skriv en KOMMA mellan projektblocken.
+6. Klicka på Commit changes. Vänta 1–2 minuter och ladda om din GitHub Pages-sida.
+
+VIKTIGT: index.html och projekt.html ska normalt inte ändras. Allt projektinnehåll ändras i projektdata.js.
+Din tidigare mobilhallare.html kan ligga kvar, men startsidan använder nu projekt.html?id=mobilhallare.
+Undvik att ladda upp privata uppgifter och upphovsrättsskyddade bilder som du saknar rätt att publicera.

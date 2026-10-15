@@ -54,6 +54,10 @@
     .project-content { padding:26px; }
     .project-content h3 { font-size:25px; }
     .project-content p { color:var(--muted); }
+    .project-image img {width:100%;height:100%;object-fit:cover;}
+    .project-image:has(img) {padding:0;}
+    .project a.project-link {display:inline-block;margin-top:14px;font-weight:700;color:var(--brown);}
+    .project a.project-link:focus-visible {outline:3px solid var(--brown);outline-offset:4px;}
     .tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
     .tags span { background:#eee6dd; padding:5px 10px; border-radius:20px; font-size:12px; }
     .about { background:#eae0d5; }
@@ -99,12 +103,8 @@
     <section id="projekt">
       <div class="wrap">
         <div class="section-heading"><div><div class="eyebrow">Utvalda arbeten</div><h2>Mina projekt</h2></div><span class="text-link">Konstruktion & kreativitet</span></div>
-        <div class="projects">
-          <article class="project"><div class="project-image"><span>01 / Mobilhållare</span></div><div class="project-content"><div class="eyebrow">Produktutveckling</div><h3>Justerbar mobil- och surfplattehållare</h3><p>Konceptutveckling med fokus på stabilitet, användarvänlighet och tillverkningsanpassning.</p><div class="tags"><span>CAD</span><span>Produktutveckling</span><span>Konceptdesign</span></div><p style="margin:20px 0 0"><a class="text-link" href="mobilhallare.html">Läs mer om projektet →</a></p></div></article>
-          <article class="project"><div class="project-image"><span>02 / Profixio</span></div><div class="project-content"><div class="eyebrow">UX/UI-design</div><h3>Profixio – förbättrad användarupplevelse</h3><p>Kandidatarbete med fokus på navigering, informationshierarki, prototyper och användbarhetstester.</p><div class="tags"><span>UX/UI</span><span>Prototyping</span><span>Användbarhet</span></div></div></article>
-          <article class="project"><div class="project-image"><span>03 / CAD</span></div><div class="project-content"><div class="eyebrow">Konstruktion</div><h3>CAD och tekniska konstruktioner</h3><p>En samlingsplats för 3D-modeller, ritningar och konstruktionsprojekt. Fler projektbilder kommer snart.</p><div class="tags"><span>SolidWorks</span><span>3D-modellering</span><span>Tekniska ritningar</span></div></div></article>
-          <article class="project"><div class="project-image"><span>04 / Grafisk design</span></div><div class="project-content"><div class="eyebrow">Grafisk formgivning</div><h3>Offentlig konst i Eskilstuna</h3><p>Grafiskt arbete med en broschyr om offentlig konst, med fokus på layout och tydlig visuell kommunikation.</p><div class="tags"><span>Layout</span><span>Grafisk design</span><span>Kommunikation</span></div></div></article>
-        </div>
+        <div class="projects" id="projektlista"></div>
+        <noscript>Aktivera JavaScript för att visa projekten.</noscript>
       </div>
     </section>
 
@@ -121,5 +121,22 @@
   </main>
   <footer>© <span id="year">2026</span> Sara Tiger Nyrén · Portfolio</footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="projektdata.js"></script>
+  <script>
+    const list = document.getElementById('projektlista');
+    const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    if (Array.isArray(window.PROJEKT)) {
+      list.innerHTML = window.PROJEKT.map((p, i) => `
+        <article class="project">
+          <div class="project-image">${p.omslagsbild ? `<img src="${encodeURI(p.omslagsbild)}" alt="${esc(p.titel)}" loading="lazy">` : `<span>${String(i+1).padStart(2,'0')} / ${esc(p.kortnamn || p.titel)}</span>`}</div>
+          <div class="project-content">
+            <div class="eyebrow">${esc(p.kategori)}</div>
+            <h3>${esc(p.titel)}</h3><p>${esc(p.kortBeskrivning)}</p>
+            <div class="tags">${(p.taggar || []).map(t => `<span>${esc(t)}</span>`).join('')}</div>
+            <a class="project-link" href="projekt.html?id=${encodeURIComponent(p.id)}">Läs mer om projektet →</a>
+          </div>
+        </article>`).join('');
+    }
+  </script>
 </body>
 </html>
