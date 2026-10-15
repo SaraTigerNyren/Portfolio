@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="sv"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mobilhållare | Sara Tiger Nyrén</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet"><style>
+    :root { --cream:#f7f3ee; --white:#fffdfb; --sand:#e9ded2; --taupe:#cdbba9; --brown:#795b45; --dark:#2c2621; --muted:#6e655e; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--cream); color:var(--dark); font-family:'DM Sans',Arial,sans-serif; line-height:1.65; }
+    a { color:inherit; }
+    .wrap { max-width:1180px; margin:auto; padding:0 28px; }
+    header { background:rgba(255,253,251,.96); position:sticky; top:0; z-index:10; border-bottom:1px solid #e9e1d8; }
+    .nav { display:flex; align-items:center; justify-content:space-between; min-height:78px; gap:20px; }
+    .brand { text-decoration:none; font-size:15px; font-weight:700; letter-spacing:.24em; text-transform:uppercase; }
+    nav { display:flex; flex-wrap:wrap; gap:25px; }
+    nav a { text-decoration:none; font-size:14px; }
+    nav a:hover, .text-link:hover { color:var(--brown); text-decoration:underline; }
+    .hero { background:linear-gradient(115deg,#f1e9e0,#e3d3c1); padding:100px 0; }
+    .hero-inner { display:grid; grid-template-columns:1.1fr .9fr; gap:65px; align-items:center; }
+    .eyebrow { text-transform:uppercase; letter-spacing:.26em; font-size:12px; font-weight:700; color:var(--brown); }
+    h1,h2,h3 { font-family:'Playfair Display',Georgia,serif; font-weight:500; line-height:1.16; }
+    h1 { font-size:clamp(43px,5vw,72px); margin:20px 0 24px; }
+    h2 { font-size:clamp(32px,3.5vw,47px); margin:12px 0 25px; }
+    h3 { font-size:26px; margin:12px 0; }
+    p { margin:0 0 22px; }
+    .intro { max-width:570px; font-size:17px; }
+    .actions { display:flex; flex-wrap:wrap; gap:14px; margin-top:30px; }
+    .btn { display:inline-block; text-decoration:none; padding:13px 22px; border:1px solid var(--brown); border-radius:5px; font-weight:600; font-size:14px; transition:.2s; }
+    .btn-primary { background:var(--brown); color:white; }
+    .btn-primary:hover { background:#59412f; }
+    .btn-outline:hover { background:#e9dcd0; }
+    .hero-art { min-height:380px; border-radius:140px 140px 8px 8px; background:linear-gradient(135deg,#b59a82,#e9ded2 65%,#f6f1e9); display:flex; align-items:center; justify-content:center; padding:35px; box-shadow:20px 20px 0 rgba(255,255,255,.35); }
+    .hero-photo { width:100%; height:100%; min-height:380px; object-fit:cover; object-position:center 35%; display:block; border-radius:140px 140px 8px 8px; }
+    .art-frame { width:100%; border:1px solid rgba(255,255,255,.75); padding:55px 20px; text-align:center; }
+    .art-frame span { font-family:'Playfair Display',Georgia,serif; font-size:clamp(34px,4vw,55px); line-height:1.3; }
+    .art-frame small { display:block; letter-spacing:.2em; margin-top:16px; text-transform:uppercase; }
+    section { padding:95px 0; scroll-margin-top:80px; }
+    .section-heading { display:flex; align-items:end; justify-content:space-between; gap:20px; margin-bottom:30px; }
+    .section-heading h2 { margin-bottom:0; }
+    .text-link { font-weight:600; font-size:14px; }
+    .projects { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:26px; }
+    .project { background:var(--white); border:1px solid #e9e0d7; border-radius:8px; overflow:hidden; }
+    .project-image { height:230px; display:flex; align-items:center; justify-content:center; padding:20px; text-align:center; background:linear-gradient(145deg,#e9dfd4,#c8b19e); }
+    .project:nth-child(2) .project-image { background:linear-gradient(145deg,#e1e5dc,#a7b4a5); }
+    .project:nth-child(3) .project-image { background:linear-gradient(145deg,#e8e1d8,#b7a79a); }
+    .project:nth-child(4) .project-image { background:linear-gradient(145deg,#eee7dd,#d3bfa9); }
+    .project-image span { font-family:'Playfair Display',Georgia,serif; font-size:30px; color:#44372e; }
+    .project-content { padding:26px; }
+    .project-content h3 { font-size:25px; }
+    .project-content p { color:var(--muted); }
+    .tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
+    .tags span { background:#eee6dd; padding:5px 10px; border-radius:20px; font-size:12px; }
+    .about { background:#eae0d5; }
+    .about-grid { display:grid; grid-template-columns:.75fr 1.25fr; gap:65px; align-items:center; }
+    .portrait { min-height:350px; background:linear-gradient(145deg,#bca48c,#e9ded2); border-radius:170px 170px 8px 8px; display:flex; align-items:center; justify-content:center; text-align:center; padding:30px; }
+    .portrait span { font-family:'Playfair Display',Georgia,serif; font-size:38px; }
+    .about p { max-width:650px; }
+    .contact { text-align:center; }
+    .contact p { max-width:530px; margin:0 auto 24px; }
+    footer { border-top:1px solid #e5d9cc; text-align:center; padding:25px; font-size:13px; color:var(--muted); }
+    @media(max-width:760px) { .nav { align-items:flex-start; flex-direction:column; padding:18px 0; } nav { gap:15px; } .hero { padding:60px 0; } .hero-inner,.about-grid { grid-template-columns:1fr; gap:35px; } .hero-art { min-height:280px; } section { padding:65px 0; } .projects { grid-template-columns:1fr; } .section-heading { align-items:start; flex-direction:column; } }
+   .project-hero{background:#eae0d5;padding:90px 0}.project-hero p{max-width:720px}.content{max-width:850px;margin:auto;padding:75px 28px}.content h2{font-size:32px;margin-top:40px}.placeholder{background:#e9ded2;border:1px dashed #b9a38f;border-radius:10px;padding:60px 20px;text-align:center;color:#665647;margin:24px 0}.back{display:inline-block;margin-top:30px} </style></head><body><header><div class="wrap nav"><a class="brand" href="index.html">Sara Tiger Nyrén</a><nav><a href="index.html">Hem</a><a href="index.html#projekt">Projekt</a><a href="index.html#ommig">Om mig</a><a href="index.html#kontakt">Kontakt</a></nav></div></header><main><div class="project-hero"><div class="wrap"><div class="eyebrow">Produktutveckling · CAD-konstruktion</div><h1>Justerbar mobil- och surfplattehållare</h1><p>Projekt med fokus på användarvänlighet, stabilitet och konstruktion. Här presenterar jag arbetsprocessen från identifierade behov till utvecklade koncept och CAD-modellering.</p><a class="btn btn-outline" href="index.html#projekt">← Tillbaka till projekten</a></div></div><div class="content"><h2>01. Bakgrund och syfte</h2><p>Målet med projektet är att utveckla en hållare för mobiltelefon eller surfplatta som är enkel att använda och anpassa efter olika situationer.</p><h2>02. Kundbehov och idéarbete</h2><p>Här kan jag visa identifierade användarbehov, tidiga skisser och hur de påverkat designvalen.</p><div class="placeholder">Plats för dina skisser och konceptbilder</div><h2>03. Konceptutvärdering</h2><p>Här kan jag jämföra alternativa koncept och beskriva varför ett av dem valdes för vidareutveckling.</p><div class="placeholder">Plats för bilder på olika koncept</div><h2>04. CAD-modellering och konstruktion</h2><p>Här kan jag presentera 3D-modeller, tekniska ritningar, materialval och överväganden kring tillverkning och montering.</p><div class="placeholder">Plats för SolidWorks-bilder och tekniska ritningar</div><h2>05. Resultat och reflektion</h2><p>Här fyller jag i slutresultatet, vad jag lärde mig och möjliga förbättringar när projektet är klart.</p><a class="btn btn-primary back" href="index.html#projekt">← Till alla projekt</a></div></main><footer>© Sara Tiger Nyrén · Portfolio</footer></body></html>
