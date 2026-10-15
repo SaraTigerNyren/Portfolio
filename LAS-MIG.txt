@@ -1,0 +1,1 @@
+Ladda upp projektdata.js i repots rot och samtliga PNG-filer i mappen bilder/. Behåll din befintliga projekt.html. Bilderna är beskurna från dina uppladdade original, inte AI-genererade. Notera att projekt 04–06 får text vänster/bild höger om du redan har lagt in den uppdaterade projekt.html.
