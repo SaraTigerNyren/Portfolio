@@ -14,7 +14,7 @@ window.PROJEKT = [
     omslagsbild: "", // t.ex. "bilder/mobilhallare-omslag.jpg"
     introduktion: "Ett produktutvecklingsprojekt där jag i grupp med andra, arbetat med att ta fram en justerbar hållare för mobiltelefoner.",
     avsnitt: [
-      { rubrik: "Bakgrund och mål", text: "Syftet var att axla yrkesrollen som CAD-konstruktör i ett modernt industriellt produktutvecklingsprojekt och att konstruera ett modulärt och justerbart ställ/hållare för en smartphone, avsett att tillverkas i formsprutad plast och bockad plåt. Gruppen skulle genomföra detta genom att ta en produktidé genom de tidiga faserna av konstruktionsprocessen – från kundbehov och kravspecifikation till en färdig digital prototyp (CAD-modell). ", bilder: [] }
+      { rubrik: "Bakgrund och mål", text: "Syftet var att axla yrkesrollen som CAD-konstruktör i ett modernt industriellt produktutvecklingsprojekt och att konstruera ett modulärt och justerbart ställ/hållare för en smartphone, avsett att tillverkas i formsprutad plast och bockad plåt. Gruppen skulle genomföra detta genom att ta en produktidé genom de tidiga faserna av konstruktionsprocessen – från kundbehov och kravspecifikation till en färdig digital prototyp (CAD-modell). ", bilder: [] },
       { rubrik: "CAD och konstruktion", text: "Här presnteras bilder på Cad konstruktionen, konstruktionen 3D printades också och det visas också här i bilderna nedan", bilder: [] },
     ]
   },
